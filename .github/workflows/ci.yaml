@@ -3,7 +3,7 @@ name: Complete DevOps Project Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-push:
