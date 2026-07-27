@@ -48,8 +48,8 @@ jobs:
 # Step 6: Git Author Configuration
       - name: Configure Git Author
         run: |
-          git config-local user.email sirechukwu@gmail.com
-          git config-local user.name sirechukwu
+          git config --local user.email sirechukwu@gmail.com
+          git config --local user.name sirechukwu
 
       # Step 7: Update Helm chart
       - name: Update Helm chart with new image tag

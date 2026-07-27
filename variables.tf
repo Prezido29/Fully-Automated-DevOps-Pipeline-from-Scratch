@@ -19,7 +19,7 @@ variable "key_name" {
 variable "my_ip" {
   description = "Your IP address in CIDR notation, for SSH/API access (e.g. 1.2.3.4/32)"
   type        = string
-  default     = "102.90.80.64/32"
+  default     = "102.90.117.81/32"
 }
 
 variable "volume_size" {
