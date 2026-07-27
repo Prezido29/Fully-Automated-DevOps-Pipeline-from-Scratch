@@ -2,3 +2,6 @@ k8s-cluster-key.pem
 .terraform
 terraform.tfstate.backup
 terraform.tfstate
+ec2-kubeconfig
+terraform.tfstate.1784926152.backup
+terraform.tfstate.*.backup

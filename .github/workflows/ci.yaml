@@ -44,3 +44,17 @@ jobs:
             sirecloud/complete-devops-project:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+# Step 6: Git Author Configuration
+      - name: Configure Git Author
+        run: |
+          git config-local user.email sirechukwu@gmail.com
+          git config-local user.name sirechukwu
+
+      # Step 7: Update Helm chart
+      - name: Update Helm chart with new image tag
+        run: |
+          sed -i "s/tag:.*/tag: ${{ env.SHORT_SHA }}/" ./complete-dev-project/values.yaml
+          git add ./complete-dev-project/values.yaml
+          git commit-m "updated image tag to ${{ env.SHORT_SHA }}"
+          git push
