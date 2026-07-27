@@ -56,5 +56,5 @@ jobs:
         run: |
           sed -i "s/tag:.*/tag: ${{ env.SHORT_SHA }}/" ./complete-dev-project/values.yaml
           git add ./complete-dev-project/values.yaml
-          git commit-m "updated image tag to ${{ env.SHORT_SHA }}"
+          git commit -m "updated image tag to ${{ env.SHORT_SHA }}"
           git push
